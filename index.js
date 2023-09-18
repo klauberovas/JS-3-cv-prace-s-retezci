@@ -13,6 +13,9 @@ document.body.innerHTML += `<p>Posledních pět písmen je: ${title.slice(
   16,
   22,
 )}`; // počítají se i mezery jako znaky
+document.body.innerHTML += '<br>';
+document.body.innerHTML += '<br>';
+document.body.innerHTML += '<br>';
 
 // //-----------------------------------------------------------------------------------------------------------------
 // E-MAILY
@@ -48,14 +51,23 @@ document.body.innerHTML +=
   `<p>Uživatelské jméno je ${parsedEmail.userName}</p>` +
   `<p>Doména uživatele je ${parsedEmail.domain}</p>`;
 
+document.body.innerHTML += '<br>';
+document.body.innerHTML += '<br>';
+document.body.innerHTML += '<br>';
+
 // //-----------------------------------------------------------------
 // DORUČOVÁNÍ
 
 // Vytvořte webovou stránku, kde uživatel zadá svoji adresu například pro účely doručení objednaného zboží. Požaduje ulici, číslo domu, město a PSČ.
 // Uložte všechny údaje do vhodně pojmenovaných proměnných.
+const street = prompt('Zadej ulici, kde bydlíš bez čísla popisného.');
+const numberOfHouse = prompt('Zadej číslo popisné.');
+const city = prompt('Zadej město, kde bydlíš.');
+const postalCode = prompt('Zadej PSČ.');
 // Ze zadanách údajů sestavte pomocí interpolace řetězeců obsahující HTML ve formátu jako níže
 // <address>
 //   <p>Pod Stájemi 67</p>
 //   <p>12754 Klysnov</p>
 // </address>
 // Pomocí document.body.innerHTML vložte sestavené HTML do stránky.
+document.body.innerHTML += `<adress><p>${street} ${numberOfHouse}</p><p>${postalCode} ${city}</p></adress>`;
