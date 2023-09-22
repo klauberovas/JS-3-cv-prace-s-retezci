@@ -10,8 +10,8 @@ document.body.innerHTML += `<p>Název filmu s velkými písmeny: ${title.toUpper
 document.body.innerHTML += `<p>Název filmu s malými písmeny: ${title.toLowerCase()}</p>`;
 // // Vypište z názvu posledních pět písmen.
 document.body.innerHTML += `<p>Posledních pět písmen je: ${title.slice(
-  16,
-  22,
+  title.length - 5,
+  title.length,
 )}`; // počítají se i mezery jako znaky
 document.body.innerHTML += '<br>';
 document.body.innerHTML += '<br>';
